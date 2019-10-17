@@ -5,7 +5,7 @@ class Person{
         this.age = attrib.age
         this.location = attrib.location
     }
-    speak(){return `Hello my name is ${this.name}, and i am from ${this.location}`}
+    speak(){console.log(`Hello my name is ${this.name}, and i am from ${this.location}`)}
 }
 
 class Instructor extends Person{
@@ -27,7 +27,7 @@ class Student extends Person{
         this.favSubjects = attrib.favSubjects
     }
     listsSubjects(){
-        for (i in this.favSubjects){
+        for (let i = 0; i < this.favSubjects.length; i++ ){
             console.log(this.favSubjects[i])
         } 
     }
@@ -53,13 +53,39 @@ class ProjectManager extends Instructor{
     }
 }
 
-const fred = new Instructor({
-    name: 'Fred',
-    location: 'Bedrock',
-    age: 37,
-    favLanguage: 'JavaScript',
-    specialty: 'Front-end',
-    catchPhrase: `Don't forget the homies`
+const britt = new Instructor({
+    name: 'Britt',
+    location: 'canada',
+    age: 35,
+    favLanguage: 'HTML5',
+    specialty: 'UX',
+    catchPhrase: `eh`
   })
 
- fred.demo('dogs')
+const nickolaus = new ProjectManager({
+    name: 'Nick',
+    location: 'USA',
+    age: 20,
+    favLanguage: 'JS',
+    specialty: 'UX',
+    catchPhrase: `They took our jobs!`,
+    gradClassName: 'WEB19',
+    favInstructor: 'Britt'
+  })
+ const me = new Student({
+    name: 'Tony',
+    location: 'SD, USA',
+    age: 31,
+    previousBackground: 'General Laborer',
+    className: 'WEB25',
+    favSubjects: ['Python', 'JavaScript']
+
+    
+  })
+
+  britt.demo('dogs')
+ nickolaus.demo('gains')
+ nickolaus.debugsCode(me, 'Nothing... ever')
+ me.listsSubjects()
+ me.speak()
+ me.demo('beer') //intended to fail
