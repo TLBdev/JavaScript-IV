@@ -21,9 +21,9 @@ class GameObject{
   
 class CharacterStats extends GameObject{
     
-    CharacterStats(attrib){
+    constructor(attrib){
         super(attrib)
-        GameObject.call(this, attrib)
+        
         this.healthPoints = attrib.healthPoints
       }
       takeDamage(){
@@ -34,7 +34,7 @@ class CharacterStats extends GameObject{
 class Humanoid extends CharacterStats{
     constructor(attrib){
         super(attrib)
-        CharacterStats.call(this, attrib)
+        
         this.team = attrib.team,
         this.weapons = attrib.weapons,
         this.language = attrib.language
@@ -44,16 +44,7 @@ class Humanoid extends CharacterStats{
       }
 }
   
-  /*
-    * Inheritance chain: GameObject -> CharacterStats -> Humanoid
-    * Instances of Humanoid should have all of the same properties as CharacterStats and GameObject.
-    * Instances of CharacterStats should have all of the same properties as GameObject.
-  */
-  Object.assign(Humanoid.prototype, GameObject.prototype)
-  Object.assign(Humanoid.prototype, CharacterStats.prototype)
-  Object.assign(CharacterStats.prototype, GameObject.prototype)
-  // Test you work by un-commenting these 3 objects and the list of console logs below:
-  
+ 
   
     const mage = new Humanoid({
       createdAt: new Date(),
