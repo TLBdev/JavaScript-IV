@@ -15,7 +15,7 @@ class Instructor extends Person{
         this.favLanguage = attrib.favLanguage
         this.catchPhrase = attrib.catchPhrase
     }
-    demo(str){console.log(`Today we are learning about${str}`)}
+    demo(str){console.log(`Today we are learning about ${str}.`)}
     grade(student, subject){console.log(`${student.name} recieves a perfect score on ${subject}`)}
 }
 
