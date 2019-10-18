@@ -61,8 +61,25 @@ const britt = new Instructor({
     specialty: 'UX',
     catchPhrase: `eh`
   })
+  const britt2 = new Instructor({
+    name: 'Brittany',
+    location: 'canada',
+    age: 34,
+    favLanguage: 'HTML5',
+    specialty: 'UX',
+    catchPhrase: `eh`
+  })
+  const britt3 = new Instructor({
+    name: 'Britt H.',
+    location: 'canada',
+    age: 33,
+    favLanguage: 'HTML5',
+    specialty: 'UX',
+    catchPhrase: `eh`
+  })
 
-const nickolaus = new ProjectManager({
+
+  const nickolaus = new ProjectManager({
     name: 'Nick',
     location: 'USA',
     age: 20,
@@ -72,20 +89,56 @@ const nickolaus = new ProjectManager({
     gradClassName: 'WEB19',
     favInstructor: 'Britt'
   })
- const me = new Student({
+  const nickolaus2 = new ProjectManager({
+    name: 'Nicko',
+    location: 'USA',
+    age: 20,
+    favLanguage: 'JS',
+    specialty: 'UX',
+    catchPhrase: `They took our jobs!`,
+    gradClassName: 'WEB19',
+    favInstructor: 'Britt'
+  })
+  const nickolaus3 = new ProjectManager({
+    name: 'Nickolaus',
+    location: 'USA',
+    age: 20,
+    favLanguage: 'JS',
+    specialty: 'UX',
+    catchPhrase: `They took our jobs!`,
+    gradClassName: 'WEB19',
+    favInstructor: 'Britt'
+  })
+
+
+const me = new Student({
     name: 'Tony',
     location: 'SD, USA',
     age: 31,
     previousBackground: 'General Laborer',
     className: 'WEB25',
     favSubjects: ['Python', 'JavaScript']
-
-    
-  })
-
-  britt.demo('dogs')
- nickolaus.demo('gains')
- nickolaus.debugsCode(me, 'Nothing... ever')
- me.listsSubjects()
- me.speak()
- me.demo('beer') //intended to fail
+    })
+const me2 = new Student({
+    name: 'cat',
+    location: 'window, USA',
+    age: 4,
+    previousBackground: 'General Laborer',
+    className: 'WEB25',
+    favSubjects: ['Python', 'JavaScript', 'Pizza']
+    })
+const me3 = new Student({
+    name: 'dog',
+    location: 'house, USA',
+    age: 7,
+    previousBackground: 'General Laborer',
+    className: 'WEB25',
+    favSubjects: ['Python', 'JavaScript', 'Pizza', 'Beer']
+    })
+S
+britt.demo('dogs')
+nickolaus.demo('gains')
+nickolaus.debugsCode(me, 'Nothing... ever')
+me.listsSubjects()
+me.speak()
+me.demo('beer') //intended to fail
